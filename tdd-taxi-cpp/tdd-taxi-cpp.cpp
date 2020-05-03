@@ -20,8 +20,7 @@ wstring procLineGDK(wstring wstrLine)
 string procLineUTF8(const string strLine)
 {
 	wstring_convert<codecvt_utf8<wchar_t>> wstrConvert;
-	wstring ret = procLineGDK(wstrConvert.from_bytes(strLine));
-	return wstrConvert.to_bytes(ret);
+	return wstrConvert.to_bytes(procLineGDK(wstrConvert.from_bytes(strLine)));
 }
 
 void procFile(const char* fileName)
