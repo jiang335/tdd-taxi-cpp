@@ -162,6 +162,11 @@
     </ClCompile>
     <ClCompile Include="unittest1.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tdd-taxi-cpp\tdd-taxi-cpp.vcxproj">
+      <Project>{bd8b4e42-4216-4d9f-837a-1884c70a50f3}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
