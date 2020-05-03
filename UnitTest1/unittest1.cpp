@@ -17,19 +17,19 @@ namespace UnitTest1
 	public:
 		TEST_METHOD(KilpMetre)
 		{
-			Assert::AreEqual(calcCostByKilpMetre(-1), 0.0);
-			Assert::AreEqual(calcCostByKilpMetre(0), 0.0);
-			Assert::AreEqual(calcCostByKilpMetre(1), 6.0);
-			Assert::AreEqual(calcCostByKilpMetre(2), 6.0);
-			Assert::AreEqual(calcCostByKilpMetre(4), 7.6);
-			Assert::AreEqual(calcCostByKilpMetre(8), 10.8);
-			Assert::AreEqual(calcCostByKilpMetre(10), 13.2);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(-1) - 0) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(0) - 0) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(1) - 6) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(2) - 6) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(4) - 7.6) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(8) - 10.8) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByKilpMetre(10) - 13.2) < 0.001, true);
 		}
 		TEST_METHOD(Minutes)
 		{
-			Assert::AreEqual(calcCostByMinutes(-1), 0.0);
-			Assert::AreEqual(calcCostByMinutes(0), 0.0);
-			Assert::AreEqual(calcCostByMinutes(2), 0.5);
+			Assert::AreEqual(fabs(calcCostByMinutes(-1) - 0.0) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByMinutes(0) - 0.0) < 0.001, true);
+			Assert::AreEqual(fabs(calcCostByMinutes(2) - 0.5) < 0.001, true);
 		}
 		TEST_METHOD(Cost)
 		{
